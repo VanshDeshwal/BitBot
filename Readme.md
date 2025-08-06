@@ -13,31 +13,70 @@ BitBot is a comprehensive AI assistant solution that combines modern web technol
 
 ## 📁 Project Structure
 
+> **Interview Note**: This repository demonstrates full-stack project planning and enterprise-level architecture, even though only the frontend is currently deployed.
+
 ```
 BitBot/
-├── frontend/                 # Frontend application
+├── frontend/                 # 🚀 DEPLOYED: Frontend application (GitHub Pages)
 │   ├── index.html           # Main entry point
+│   ├── CNAME                # Custom domain configuration
+│   ├── package.json         # Dependencies and scripts
 │   └── src/
 │       ├── app.js           # Application initialization
 │       ├── components/      # Reusable UI components
-│       │   └── ChatInterface.js
+│       │   └── ChatInterface.js  # Main chat interface
 │       ├── services/        # API and external services
-│       │   └── ApiService.js
-│       ├── utils/           # Utility functions
-│       │   ├── EventEmitter.js
-│       │   ├── DOMHelper.js
-│       │   └── MessageFormatter.js
+│       │   └── ApiService.js     # Backend communication layer
+│       ├── utils/           # Utility functions and helpers
+│       │   ├── EventEmitter.js   # Custom event system
+│       │   ├── DOMHelper.js      # DOM manipulation utilities
+│       │   └── MessageFormatter.js # Text formatting & sanitization
 │       ├── config/          # Configuration management
-│       │   └── config.js
+│       │   └── config.js         # Environment-aware configuration
 │       └── assets/          # Static assets
 │           └── css/
-│               └── main.css
-├── backend/                 # Backend API (coming soon)
-├── docs/                    # Documentation
-├── tests/                   # Test files
-├── scripts/                 # Build and deployment scripts
-└── README.md               # This file
+│               └── main.css      # Comprehensive styling system
+├── backend/                 # 📋 PLANNED: FastAPI backend architecture
+│   ├── app/                 # (Ready for FastAPI application)
+│   ├── models/              # (Database models)
+│   ├── services/            # (Business logic layer)
+│   ├── api/                 # (API routes and endpoints)
+│   └── requirements.txt     # (Python dependencies)
+├── docs/                    # 📚 Documentation and guides
+│   └── DEVELOPMENT.md       # Comprehensive development guide
+├── tests/                   # 🧪 Testing infrastructure (ready for implementation)
+│   ├── frontend/            # (Frontend unit and integration tests)
+│   └── backend/             # (Backend API tests)
+├── scripts/                 # 🛠️ Build and deployment automation
+│   ├── deploy/              # (Deployment scripts)
+│   └── build/               # (Build automation)
+├── .github/                 # ⚙️ CI/CD and automation
+│   ├── workflows/           # GitHub Actions
+│   │   └── deploy.yml       # Automated deployment pipeline
+│   └── README.md            # Deployment documentation
+├── .gitignore              # Git ignore configuration
+└── README.md               # This comprehensive documentation
 ```
+
+### **Architecture Highlights for Technical Interviews**
+
+**🏗️ Enterprise-Level Planning:**
+- Modular frontend architecture with separation of concerns
+- Service layer abstraction for API communication
+- Event-driven architecture with custom event system
+- Configuration management for multiple environments
+
+**🚀 DevOps & Deployment:**
+- GitHub Actions CI/CD pipeline
+- Custom domain with professional subdomain
+- Environment-aware configuration
+- Automated deployment validation
+
+**📈 Scalability Considerations:**
+- Backend folder structure ready for FastAPI implementation
+- Microservices-ready architecture
+- Testing infrastructure prepared
+- Documentation-driven development
 
 ## 🛠️ Technologies
 
@@ -144,12 +183,20 @@ Configuration is managed through `src/config/config.js` with environment detecti
 ## 🚀 Deployment
 
 ### GitHub Pages (Frontend)
-The frontend is configured for GitHub Pages deployment:
+The frontend is automatically deployed using GitHub Actions:
 
-1. Push changes to the `main` branch
-2. Enable GitHub Pages in repository settings
-3. Set source to root directory
-4. Access at `https://vanshdeshwal.github.io/BitBot`
+1. Push changes to the `main` branch (frontend folder)
+2. GitHub Actions automatically builds and deploys
+3. Available at custom domain: `https://chat.vanshdeshwal.dev`
+4. Also accessible at: `https://vanshdeshwal.github.io/BitBot`
+
+#### DNS Configuration
+Configure your DNS provider with:
+```
+Type: CNAME
+Name: chat
+Value: vanshdeshwal.github.io
+```
 
 ### Azure (Backend - Coming Soon)
 Backend deployment will use Azure services:
