@@ -123,6 +123,13 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+bitbot-env/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
 
 # FastAPI / Backend specific
 instance/
