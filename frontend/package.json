@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "BitBot Frontend - AI Assistant powered by LangChain and LangGraph",
   "main": "src/app.js",
-  "type": "module",
   "scripts": {
     "dev": "python -m http.server 8080 || npx serve .",
     "build": "node scripts/build.js",

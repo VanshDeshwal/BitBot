@@ -33,23 +33,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: frontend/package.json
           
-      - name: Install dependencies
-        working-directory: ./frontend
-        run: |
-          if [ -f package.json ]; then
-            npm ci
-          else
-            echo "No package.json found, skipping npm install"
-          fi
-        
       - name: Validate frontend structure
         working-directory: ./frontend
         run: |
